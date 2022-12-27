@@ -7,6 +7,7 @@ function App() {
         <p>
           Hi Folks! we have started our internship learning project
         </p>
+        <p>Welcome to muzaffar's code</p>
       </header>
     </div>
   );
