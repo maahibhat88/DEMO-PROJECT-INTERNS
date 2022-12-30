@@ -1,19 +1,48 @@
 import  './menu.css'
 
-function Menu() {
+function Menu(props) {
+   // console.log("Props of a functional component are : ",props)
+    // destructuring
+    let {menuList, name} = props;
+   // console.log("Destructured Menulist ",menuList);
+
+
+    // for(let i = 0; i<menuList.length; i++){
+    //     console.log("Menu id  ",menuList[i]);
+    // }
+
+    // const name = () => {
+
+    // }
+
+    // name()
+
+    menuList.map((element)=>{
+        console.log("Menu ",element);
+    })
+
     return(
         <div>
             <nav>
                 <ul>
-                    <li>
-                        <a>Home1</a>
+
+                    {
+                        menuList.map((i)=>{
+                            return (
+                                    <li key={i.id} className={ i.isActive && 'active'  }>
+                                        <a id={i.id} href=""> 
+                                            {i.name} 
+                                        </a>
+                                    </li>
+                            )
+                        })
+                    }
+                    {/* <li>
+                        <a>About1 {name}</a>
                     </li>
                     <li>
-                        <a>About1</a>
-                    </li>
-                    <li>
-                        <a>Contact Us</a>
-                    </li>
+                        <a>Contact Us {name}</a>
+                    </li> */}
                 </ul>
             </nav>
         </div>
@@ -21,5 +50,10 @@ function Menu() {
 }
 
 export default Menu;
+
+// props
+// destructuring
+// array or list method map
+// conditional rendering  // short and conditional rendering
 
 
