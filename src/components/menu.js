@@ -37,7 +37,10 @@ function Menu(props) {
                             )
                         })
                     }
+                    
+
                     {/* <li>
+                    jjnjknkjnkjnkjlkkl
                         <a>About1 {name}</a>
                     </li>
                     <li>
