@@ -10,9 +10,10 @@ const seeValue = (event) => {
 
 function App() {
 
-  let menuItems = [ { id:1, name : "Home", isActive : true },
-                    { id:2, name : "About", isActive : false },
-                    { id:3, name : "Contact Us", isActive : false }
+  let menuItems = [ { id:1, name : "Home"},
+                    { id:2, name : "About"},
+                    { id:3, name : "Contact Us"},
+                    { id:4, name : "Contact Us"}
                   ];
   let name ="Muzaffar Ahmad";
 

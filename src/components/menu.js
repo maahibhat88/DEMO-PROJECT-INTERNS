@@ -1,26 +1,28 @@
 import  './menu.css'
 
 function Menu(props) {
-   // console.log("Props of a functional component are : ",props)
-    // destructuring
-    let {menuList, name} = props;
-   // console.log("Destructured Menulist ",menuList);
-
-
-    // for(let i = 0; i<menuList.length; i++){
-    //     console.log("Menu id  ",menuList[i]);
-    // }
-
-    // const name = () => {
-
-    // }
-
-    // name()
+   let {menuList, name} = props; 
 
     menuList.map((element)=>{
         console.log("Menu ",element);
     })
 
+    const tag = menuList.find(i=>{
+        return i.id===2;
+    })
+    console.log(tag);
+
+    const set = menuList.filter(i=>{
+        return i.name==="Contact Us";
+    })
+    console.log(set);
+
+    set.map((i)=>{
+        console.log("set",i.id);
+    })
+
+
+    
     return(
         <div>
             <nav>
