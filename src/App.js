@@ -1,32 +1,22 @@
 import './App.css';
 import Menu from './components/menu'
-
-
-const seeValue = (event) => { 
-  console.log("event ",event);
-  document.getElementById("demo").innerText = event.target.value;
-}
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
-
-  let menuItems = [ { id:1, name : "Home", isActive : true },
-                    { id:2, name : "About", isActive : false },
-                    { id:3, name : "Contact Us", isActive : false }
-                  ];
-  let name ="Muzaffar Ahmad";
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <Menu  name={name} menuList={menuItems}/>
-        <p>
-          Hi Folks! we have started our internship learning project
-        </p>
-        <p>Welcome to muzaffar's code</p>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+     <Menu/>
+      <Routes>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
-
 export default App;

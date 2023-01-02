@@ -1,9 +1,24 @@
 nav {
-    background-color: #fff;
+    background-color: aquamarine;
     color  : #000;
+    text-align: justify;
 }
 
-
-.active{
-    background-color: aqua;
+li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
 }
+
+li:hover {
+    background-color: white;
+  }
+
+ul {
+    text-decoration-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
