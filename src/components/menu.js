@@ -1,15 +1,16 @@
 import  './menu.css'
+import  { Fragment } from 'react';
+import {Link} from 'react-router-dom';
 
-    function Menu(props) {
-        console.log("the value of props is:",props)
+    function Menu() {
+        /*console.log("the value of props is:",props)
         let{Data,name}=props;
         console.log("the destructed item:",Data);
 
          Data.map((element)=>{
-        console.log("list",element);
-
+           console.log("list",element);
         })
-
+        
         //It finds the first object that matches given condition
         const found=Data.find(i=>{
             return i.id===1;
@@ -24,30 +25,28 @@ import  './menu.css'
 
        
        filter.map(obj=>{
-        console.log("filter",obj.id);  
-       // console.log("filter",obj.name);
-       })
-          
-      
-
+        console.log("fill",obj.id);  
+        console.log("filter",obj.name);
+       })*/
     return(
        
-      <div>
+      <Fragment>
             <nav>
                 <ul>
                    <li>
-                        <a>Home1 </a> 
+                        <Link to="/">Home</Link> 
                                                                     
                     </li>
                     <li>
-                        <a>About1 {name}</a>
+                        <Link to="/about">About</Link>
                     </li>
                     <li>
-                       <a>Contact Us</a>
+                       <Link to="/contact">Contact</Link>
                     </li>
+                    
                 </ul>
            </nav>
-       </div>
+       </Fragment>
    );
     
 }

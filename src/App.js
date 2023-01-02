@@ -1,29 +1,24 @@
 import './App.css';
+import About from './components/about';
+import Contact from './components/Contact Us';
 import Menu from './components/menu';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/home';
 
 function App() {
-  let name="react";
-  //let student="rasheeqa";
-  let data=[
-    {id:1 ,name:"home"},
-    {id:2 ,name:"About"},
-    {id:3,name:"Contact"},
-    {id:3,name:"About"}
-  ]
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        
-            <Menu Data={data} name={name}/>
-        <p>
-          Hi Folks! we have started our internship learning project
-        </p>
-       
-      </header>
-    </div>
-  );
-}
+    
+      <BrowserRouter>
+       <Menu/>
+        <Routes>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+ 
+   )
+   }
 
 export default App;
