@@ -1,11 +1,14 @@
+import { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
 import  './menu.css'
 
 function Menu(props) {
-   let {menuList, name} = props; 
 
-    menuList.map((element)=>{
-        console.log("Menu ",element);
-    })
+    let {menuList} = props;
+
+    // menuList.map((element)=>{
+    //     console.log("Menu ",element);
+    // })
 
     const tag = menuList.find(i=>{
         return i.id===2;
@@ -24,30 +27,23 @@ function Menu(props) {
 
     
     return(
-        <div>
+        menuList.length ? <Fragment>  
             <nav>
                 <ul>
-
                     {
                         menuList.map((i)=>{
                             return (
                                     <li key={i.id} className={ i.isActive && 'active'  }>
-                                        <a id={i.id} href=""> 
+                                        <NavLink to={i.path}> 
                                             {i.name} 
-                                        </a>
+                                        </NavLink>
                                     </li>
                             )
                         })
                     }
-                    {/* <li>
-                        <a>About1 {name}</a>
-                    </li>
-                    <li>
-                        <a>Contact Us {name}</a>
-                    </li> */}
                 </ul>
             </nav>
-        </div>
+        </Fragment> : null
     );
 }
 
@@ -57,5 +53,20 @@ export default Menu;
 // destructuring
 // array or list method map
 // conditional rendering  // short and conditional rendering
+// keys ==  {ul ol dl  li  key={} }  ul li
 
 
+//fragments
+// React.Fragment
+//Fragment import direct
+// <> </>
+
+
+//views
+
+
+//npm i react-router-dom
+//<BrowserRouter> : dynamic urls
+
+//functional Component  === stateless
+//class components == stateful
