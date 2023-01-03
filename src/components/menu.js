@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import  './menu.css'
 
 function Menu(props) {
@@ -33,8 +33,8 @@ function Menu(props) {
                     {
                         menuList.map((i)=>{
                             return (
-                                    <li key={i.id} className={ i.isActive && 'active'  }>
-                                        <NavLink to={i.path}> 
+                                    <li key={i.id}>
+                                        <NavLink exact to={i.path} activeStyle={{color:'blue'}} > 
                                             {i.name} 
                                         </NavLink>
                                     </li>
@@ -43,7 +43,7 @@ function Menu(props) {
                     }
                 </ul>
             </nav>
-        </Fragment> : null
+        </Fragment> : "No Menu Present"
     );
 }
 
@@ -70,3 +70,13 @@ export default Menu;
 
 //functional Component  === stateless
 //class components == stateful
+
+
+// css  --  framework - bootstrap -- tailwind -- mui
+// functional components /// statless // hooks
+// higher order functions
+// typescript  // stateful components // class // life cycle // state
+// testing in react js
+
+
+// Nodejs
