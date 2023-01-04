@@ -27,6 +27,13 @@ function App() {
         <input onChange={seeValue} />  
         <span>We will see the input value here : <span id="demo"></span> </span>
       </header>
+
+      <div className='row'>
+          <div className='col-12'>
+            Hello 12 cols
+          </div>
+      </div>
+
     </div>
   );
 }

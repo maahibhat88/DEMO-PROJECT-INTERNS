@@ -1,7 +1,14 @@
 function Contact () {
     return(
         <>
-            Contact Us
+        <div className='row'>
+          <div className='col-6'>
+            Hello 6 cols
+          </div>
+          <div className='col-6'>
+            Hello 6 cols
+          </div>
+        </div>
         </>
     )
 };
