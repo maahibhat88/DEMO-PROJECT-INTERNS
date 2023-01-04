@@ -1,7 +1,7 @@
 function About (){
     return(
         <>
-            About Us
+            About Us page
         </>
     )
 };
