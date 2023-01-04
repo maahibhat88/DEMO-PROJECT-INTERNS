@@ -1,49 +1,30 @@
 import { Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import  './menu.css'
 
 function Menu(props) {
-
-    let {menuList} = props;
-
-    // menuList.map((element)=>{
-    //     console.log("Menu ",element);
-    // })
-
-    const tag = menuList.find(i=>{
-        return i.id===2;
-    })
-    console.log(tag);
-
-    const set = menuList.filter(i=>{
-        return i.name==="Contact Us";
-    })
-    console.log(set);
-
-    set.map((i)=>{
-        console.log("set",i.id);
-    })
-
-
-    
     return(
-        menuList.length ? <Fragment>  
-            <nav>
-                <ul>
-                    {
-                        menuList.map((i)=>{
-                            return (
-                                    <li key={i.id} className={ i.isActive && 'active'  }>
-                                        <NavLink to={i.path}> 
-                                            {i.name} 
-                                        </NavLink>
-                                    </li>
-                            )
-                        })
-                    }
+        <Fragment>  
+            <nav className="container">
+                <ul className='nav'>
+                    <li key={1} className="nav-item">
+                        <a className='nav-link' href="/" > 
+                            Home
+                        </a>
+                    </li>
+                    <li key={2} className="nav-item">
+                        <a className='nav-link' href="/about" > 
+                            About
+                        </a>
+                    </li>
+                    <li key={3} className="nav-item">
+                        <a className='nav-link' href="/contact" > 
+                            Contact
+                        </a>
+                    </li>
                 </ul>
             </nav>
-        </Fragment> : null
+        </Fragment>
     );
 }
 
@@ -70,3 +51,13 @@ export default Menu;
 
 //functional Component  === stateless
 //class components == stateful
+
+
+// css  --  framework - bootstrap -- tailwind -- mui
+// functional components /// statless // hooks
+// higher order functions
+// typescript  // stateful components // class // life cycle // state
+// testing in react js
+
+
+// Nodejs
