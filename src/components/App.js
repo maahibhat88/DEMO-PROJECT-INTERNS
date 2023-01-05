@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import natureHome from "../natureHome.jpg";
+import nature2 from "../nature2.jpg";
 
 
 const seeValue = (event) => { 
@@ -29,18 +30,18 @@ function App() {
                   <img  src={natureHome} alt="New York" width='400px' height='500px'/>
                </div>
                <div class='col-4 text-right'>
-                  <p>Nature is the ultimate source of our living. Both living and non-living things include nature, and everyone is interdependent, which helps maintain the ecosystem. Plants, animals, and humans all depend on nature for their survival. It supplies oxygen, sunlight, soil, water, and other necessary components.</p>
-                  <img  src={natureHome} alt="New York" width='400px' height='340px'/>
+                  <p><b>Nature is the ultimate source of our living. Both living and non-living things include nature, and everyone is interdependent, which helps maintain the ecosystem. Plants, animals, and humans all depend on nature for their survival. It supplies oxygen, sunlight, soil, water, and other necessary components.</b></p>
+                  <img  src={nature2} alt="New York" width='400px' height='340px'/>
                </div>
                <div class='col-4 text-center'>
-                  <form class='border p-4'>
+                  <form class='border bg-success p-4'>
                       <h1>Resgister Here</h1>
                       <input type="text" class="form-control my-4 required" placeholder="Enter Fisrt Name" name="firstname" required />
                       <input type="text" class="form-control my-4 required" placeholder="Enter Last Name" name="lastname"/>
                       <input type="text" class="form-control my-4 required" placeholder="Enter User Name" name="username"/>
                       <input type="text" class="form-control my-4 required" placeholder="Enter email" name="email"/>
                       <input type="password" class="form-control my-4 required" placeholder="Enter password" name="pswd"/>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-warning">Submit</button>
                   </form>
                </div>
       </div>

@@ -37,12 +37,12 @@ const routing = (
     </Router>
   </div>
 
-  <footer class="container bg-dark text-center text-white">
+  <footer class="container bg-primary text-center text-black">
   <section class="mb-4">
   <div class="container p-4">
-      <p >
+      <h5>
        E-Authentication Stystem |  © 2023 Copyright:
-      </p>
+      </h5>
   </div>
   </section>
 </footer>
