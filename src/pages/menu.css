@@ -1,7 +1,7 @@
 nav {
-    background-color: aquamarine;
-    color  : #000;
+    background-color: #333;
     text-align: justify;
+    text-decoration: none;
 }
 
 li {
@@ -12,13 +12,12 @@ li {
 }
 
 li:hover {
-    background-color: white;
-  }
+    background-color: #198754; 
+   }
 
 ul {
     text-decoration-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    
+    overflow: hidden;    
   }
