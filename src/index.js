@@ -18,12 +18,13 @@ import NotFound from "./components/not-found";
 
 const myStyle = {
   color: "red",
-  backgroundColor: "cyan",
-  padding: "10px"
+  backgroundColor: "none",
+  padding: "10px",
 };
 
 const routing = (
-  <div style={myStyle}>
+  <>
+  <div>
     <Router>
       <Menu />
         {/* first one is the default path */}
@@ -35,9 +36,25 @@ const routing = (
         </Switch>
     </Router>
   </div>
+
+  <footer class="container bg-dark text-center text-white">
+  <section class="mb-4">
+  <div class="container p-4">
+      <p >
+       E-Authentication Stystem |  © 2023 Copyright:
+      </p>
+  </div>
+  </section>
+</footer>
+  </>
 )
-
-
 
 ReactDOM.createRoot(document.getElementById('root'),
 render(routing));
+
+ 
+
+
+
+
+

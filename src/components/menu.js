@@ -5,22 +5,22 @@ import  './menu.css'
 function Menu(props) {
     return(
         <Fragment>  
-            <nav className="container">
-                <ul className='nav'>
+            <nav className="container bg-primary pt-4">
+                <ul className='nav nav-tabs'>
                     <li key={1} className="nav-item">
-                        <a className='nav-link' href="/" > 
+                        <NavLink className='nav-link text-black' to="/" > 
                             Home
-                        </a>
+                        </NavLink>
                     </li>
                     <li key={2} className="nav-item">
-                        <a className='nav-link' href="/about" > 
+                        <NavLink className='nav-link text-black' to="/about" > 
                             About
-                        </a>
+                        </NavLink>
                     </li>
                     <li key={3} className="nav-item">
-                        <a className='nav-link' href="/contact" > 
+                        <NavLink className='nav-link text-black' to="/contact" > 
                             Contact
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
