@@ -28,7 +28,7 @@ function About (){
                <h3>Our Objective</h3>
                <div class='row bg-info'>
                <div class='col-12'>
-               <p>The platform begins by analyzing your website’s requirements and target audience.
+               <p class='color:pink'>The platform begins by analyzing your website’s requirements and target audience.
                The platform begins by analyzing your website’s requirements and target audience.
                The platform begins by analyzing your website’s requirements and target audience.
                The platform begins by analyzing your website’s requirements and target audience.
