@@ -1,24 +1,24 @@
-import './App.css';
-import About from './components/about';
-import Contact from './components/Contact Us';
-import Menu from './components/menu';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/home';
+//import './App.css';
+import './components/style.css'
+
+
+
+//import image from './images/image.jpg';
 
 function App() {
   
+  //const imge= new URL("./images/image.jpg",import.meta.url)
+  let numbers=[
+    {id:1,name:"irtiqa"},
+    {id:2,name:"irtu"},
+  ] 
+   numbers.map((ev)=>{
+    console.log(ev);
+   })
   return (
-    
-      <BrowserRouter>
-       <Menu/>
-        <Routes>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
- 
+    <h3>
+    Hi Folks! we have started our internship learning project
+ </h3>
    )
    }
-
 export default App;

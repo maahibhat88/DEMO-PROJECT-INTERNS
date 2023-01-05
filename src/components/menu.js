@@ -1,17 +1,18 @@
 import  './menu.css'
 import  { Fragment } from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
-    function Menu() {
-        /*console.log("the value of props is:",props)
-        let{Data,name}=props;
+    function Menu(props) {
+        
+        console.log("the value of props is:",props);
+        let {Data}=props;
         console.log("the destructed item:",Data);
 
          Data.map((element)=>{
            console.log("list",element);
         })
         
-        //It finds the first object that matches given condition
+        /*//It finds the first object that matches given condition
         const found=Data.find(i=>{
             return i.id===1;
         })
@@ -28,29 +29,31 @@ import {Link} from 'react-router-dom';
         console.log("fill",obj.id);  
         console.log("filter",obj.name);
        })*/
-    return(
        
-      <Fragment>
-            <nav>
-                <ul>
-                   <li>
-                        <Link to="/">Home</Link> 
-                                                                    
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                       <Link to="/contact">Contact</Link>
-                    </li>
-                    
-                </ul>
-           </nav>
-       </Fragment>
-   );
-    
+       return(
+        <>
+        <nav>
+            <ul>
+                {
+            Data.map((i)=>{
+                return(
+                     <li key={i.id}>
+                    <NavLink exact to={i.path} className='text-white' > 
+                    {i.name} 
+                   </NavLink>
+                   </li>
+                )
+             })
+            }
+         
+            </ul>
+       </nav>
+      </>
+      ) 
+        
+                 
+       
 }
-
 export default Menu;
 
 
