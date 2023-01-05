@@ -54,6 +54,8 @@ export default Menu;
 
 
 // css  --  framework - bootstrap -- tailwind -- mui
+// Network Calls/Getting data from api's  (AXIOS)
+// form
 // functional components /// statless // hooks
 // higher order functions
 // typescript  // stateful components // class // life cycle // state
@@ -61,3 +63,6 @@ export default Menu;
 
 
 // Nodejs
+
+
+//get and post api differnce
