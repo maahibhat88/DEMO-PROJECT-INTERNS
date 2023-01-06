@@ -5,7 +5,26 @@ import  './menu.css'
 function Menu(props) {
     return(
         <Fragment>  
-            <nav className="container">
+            <h1>Places</h1>
+            {/* <div className='row'>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <card></card>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <card></card>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <card></card>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <card></card>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <card></card>
+                </div>
+
+            </div> */}
+            <nav  className="container">
                 <ul className='nav'>
                     <li key={1} className="nav-item">
                         <a className='nav-link' href="/" > 
@@ -55,7 +74,7 @@ export default Menu;
 
 // css  --  framework - bootstrap -- tailwind -- mui
 // Network Calls/Getting data from api's  (AXIOS)
-// form
+// form   state (useState)
 // functional components /// statless // hooks
 // higher order functions
 // typescript  // stateful components // class // life cycle // state
@@ -66,3 +85,19 @@ export default Menu;
 
 
 //get and post api differnce
+
+
+// assignment
+
+// Login ===   Static  : user && password and compare, when true redirect to Homepage and if user tries to goto login 
+// (check if logged in redirect back to homepage)   // use localstorage
+
+// Routing - Auth Guard -- Read and Implement ()  to protect your pages to access without login
+
+// Homepage --  kashmir tourism
+//  nav (menu)
+//  header (carousel) kashmir images
+//  about section (topic about J&K)
+// accordion ( where you can show accordions)  two (jammu and kashmir)
+// places sections (use cards ) at least 12 places 4 in a row in large display (2 in medium) 1 in small
+// footer section (any content)  Designed & Developed By Your Name
