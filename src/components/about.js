@@ -1,4 +1,10 @@
+
 function About (){
+    let data =  null;
+    axios.get('https://jsonplaceholder.typicode.com/todos/1').then(res => {
+        console.log("Data ",res.data);
+        data = res.data;
+    })
     return(
         <>
          <section class="breadcrumb fluid pt-3">
