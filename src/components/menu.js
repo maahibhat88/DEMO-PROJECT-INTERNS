@@ -41,6 +41,16 @@ function Menu(props) {
                             Contact
                         </a>
                     </li>
+                    <li key={4} className="nav-item">
+                        <a className='nav-link' href="/callback" > 
+                            CallBack
+                        </a>
+                    </li>
+                    <li key={4} className="nav-item">
+                        <a className='nav-link' href="/async" > 
+                            Async
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </Fragment>
