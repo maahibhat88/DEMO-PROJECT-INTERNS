@@ -1,9 +1,15 @@
 nav {
-    background-color: #fff;
-    color  : #000;
+    background-color: #b7a6af;
+    color  : black;
+    font-style: initial;
+
 }
 
+.text{
+    font-size: 25px;
+}
 
-.active{
-    background-color: aqua;
+nav:hover{
+    color: #794044;
+   
 }

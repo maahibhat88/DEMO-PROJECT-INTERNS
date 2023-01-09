@@ -5,23 +5,29 @@ import  './menu.css'
 function Menu(props) {
     return(
         <Fragment>  
-            <nav className="container bg-primary pt-4">
-                <ul className='nav nav-tabs'>
-                    <li key={1} className="nav-item">
-                        <NavLink className='nav-link text-black' to="/" > 
+            <nav className="container-fluid p-4">
+                <ul className='nav'>
+                <div class='row'>
+                <div class='col-12'>
+                <b class='text pt-0'>Kashmir Travels</b>
+                </div>
+                </div>
+                    <li key={1} className="nav">
+                        <NavLink className='nav-link text-black' to="/App" > 
                             Home
                         </NavLink>
                     </li>
-                    <li key={2} className="nav-item">
+                    <li key={2} className="nav">
                         <NavLink className='nav-link text-black' to="/about" > 
                             About
                         </NavLink>
                     </li>
-                    <li key={3} className="nav-item">
-                        <NavLink className='nav-link text-black' to="/contact" > 
-                            Contact
+                    <li key={3} className="nav">
+                        <NavLink className='nav-link text-black' to="/places" > 
+                            Places
                         </NavLink>
                     </li>
+              
                 </ul>
             </nav>
         </Fragment>
@@ -61,3 +67,18 @@ export default Menu;
 
 
 // Nodejs
+
+// assignment
+
+// Login ===   Static  : user && password and compare, when true redirect to Homepage and if user tries to goto login 
+// (check if logged in redirect back to homepage)   // use localstorage
+
+// Routing - Auth Guard -- Read and Implement ()  to protect your pages to access without login
+
+// Homepage --  kashmir tourism
+//  nav (menu)
+//  header (carousel) kashmir images
+//  about section (topic about J&K)
+// accordion ( where you can show accordions)  two (jammu and kashmir)
+// places sections (use cards ) at least 12 places 4 in a row in large display (2 in medium) 1 in small
+// footer section (any content)  Designed & Developed By Your Name

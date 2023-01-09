@@ -1,0 +1,25 @@
+.background-image{
+    background-image: url("https://images.pexels.com/photos/786946/pexels-photo-786946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+
+}
+
+.breadcrumb {
+    border-radius: 0;
+    background-color: transparent;
+    padding: 15px 0 10% 0;
+    text-align: center;
+
+}
+.breadcrumb li a {
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+acord{
+    background-color: #b7a6af;
+}
