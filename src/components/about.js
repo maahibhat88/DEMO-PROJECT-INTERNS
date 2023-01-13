@@ -10,12 +10,14 @@ function About (){
     const [formData,setFormData] = useState({ name : "" , email : "" });
     // https://jsonplaceholder.typicode.com/posts
     const getData = () => {
-        axios.get('http://demo5966109.mockable.io/posts').then(res => {
+        axios.get('http://localhost:8080/posts').then(res => {
+            console.log("data from nodejs ",res);
             if(res){
                 setData(res.data.data);
             }
         }); 
     };
+
 
     const formHandler = (e) => {
         console.log("Event ",e);
