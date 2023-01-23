@@ -51,6 +51,16 @@ function Menu(props) {
                             Async
                         </a>
                     </li>
+                    <li key={4} className="nav-item">
+                        <a className='nav-link' href="/login" > 
+                            Login
+                        </a>
+                    </li>
+                    <li key={4} className="nav-item">
+                        <a className='nav-link' href="/register" > 
+                            Register
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </Fragment>
