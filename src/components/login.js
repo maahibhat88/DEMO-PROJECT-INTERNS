@@ -9,9 +9,9 @@ export default function Login(props) {
     e.preventDefault();
     let email = e.target[0].value;
     let password = e.target[1].value;
-
-    let config = { 'headers' : { 'Content-Type' : 'application/json' } };
-    axios.post("http://localhost:8080/loginUser",{ email : email , password : password }).then(resp => {
+// http://localhost:8080/getPosts?token=eyJhbGciOiJIUzI1NiJ9.aXJ0aXFhQGdtYWlsLmNvbQ.OsF_rADIKi3yhVitP4_8URBvFuTPDxAfOEEsBB-cXDE
+    let config = { 'headers' : { 'Content-Type' : 'application/json', 'Authorization' : "Bearer 12228492498479284917491498" } };
+    axios.post("http://localhost:8080/loginUser",{ email : email , password : password }, config).then(resp => {
         console.log("res" ,resp.data);
         let res = resp.data;
         if(!res.error && res.status == 200){
