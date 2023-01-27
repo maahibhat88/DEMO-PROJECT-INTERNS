@@ -1,37 +1,59 @@
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { Fragment } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import  './menu.css'
 
 function Menu(props) {
+    const { isLoggedIn } = props;
+    const history = useHistory();
+
+    const logout = () => {
+        localStorage.clear();
+        history.push("/login");
+    }
+
+
     return(
         <Fragment>  
-            <h1>Places</h1>
-            {/* <div className='row'>
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <card></card>
-                </div>
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <card></card>
-                </div>
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <card></card>
-                </div>
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <card></card>
-                </div>
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <card></card>
-                </div>
-
-            </div> */}
             <nav  className="container">
                 <ul className='nav'>
+                    {isLoggedIn  ? 
+                    <>
                     <li key={1} className="nav-item">
                         <a className='nav-link' href="/" > 
                             Home
                         </a>
                     </li>
-                    <li key={2} className="nav-item">
+                    <li key={1} className="nav-item">
+                        <Button onClick={logout}>
+                            Logout
+                        </Button>
+                    </li>
+                    </> :
+                    <>
+                        <li key={6} className="nav-item">
+                            <a className='nav-link' href="/login" > 
+                                Login
+                            </a>
+                        </li>
+                        <li key={7} className="nav-item">
+                            <a className='nav-link' href="/register" > 
+                                Register
+                            </a>
+                        </li>
+                    </>
+                    }
+                </ul>
+            </nav>
+        </Fragment>
+    );
+}
+
+export default Menu;
+
+                  {/* <li key={2} className="nav-item">
                         <a className='nav-link' href="/about" > 
                             About
                         </a>
@@ -46,28 +68,11 @@ function Menu(props) {
                             CallBack
                         </a>
                     </li>
-                    <li key={4} className="nav-item">
+                    <li key={5} className="nav-item">
                         <a className='nav-link' href="/async" > 
                             Async
                         </a>
-                    </li>
-                    <li key={4} className="nav-item">
-                        <a className='nav-link' href="/login" > 
-                            Login
-                        </a>
-                    </li>
-                    <li key={4} className="nav-item">
-                        <a className='nav-link' href="/register" > 
-                            Register
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </Fragment>
-    );
-}
-
-export default Menu;
+                    </li> */}
 
 // props
 // destructuring

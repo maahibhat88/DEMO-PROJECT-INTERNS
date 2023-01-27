@@ -1,9 +1,10 @@
 import './App.css';
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 
 export default function Login(props) {
+  const history = useHistory();
 
   const formHandler = (e) => {
     e.preventDefault();
@@ -17,7 +18,9 @@ export default function Login(props) {
         if(!res.error && res.status == 200){
             // return <Redirect to="/" />;
             localStorage.setItem("user",JSON.stringify(res.data));
-            props.history.push("/");
+            setTimeout(()=>{
+              history.push("/");
+            },500)
         }
         else{
             alert(res.message);

@@ -13,6 +13,7 @@ import NotFound from "./components/not-found";
 import AsyncComp from './components/async-concept';
 import Login from "./components/login";
 import Regitser from './components/register';
+import ProtectedRoute from './protected-routes';
 
 // let menuItems = [ 
 //   { id:1, name : "Home", path : "/" },
@@ -26,17 +27,30 @@ const myStyle = {
   padding: "10px"
 };
 
+const checkLogin = () => {
+  console.log("checking")
+  if(!localStorage.getItem("user")){
+    return false;
+  }else{
+      return true;
+  }
+}
+
+
+
+
 const routing = (
   <div style={myStyle}>
     <Router>
-      <Menu />
+        <Menu isLoggedIn={checkLogin()}/>
         {/* first one is the default path */}
         <Switch>
-          <Route exact path="/" component={App}/>   
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/callback" component={Callback}/>
-          <Route path="/async" component={AsyncComp}/>
+          <ProtectedRoute exact path="/" isLoggedIn={checkLogin()} component={App} />
+          {/* // <Route exact path="/" component={App}/>   
+          // <Route path="/about" component={About}/>
+          // <Route path="/contact" component={Contact}/>
+          // <Route path="/callback" component={Callback}/>
+          // <Route path="/async" component={AsyncComp}/> */}
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Regitser}/>
           <Route component={NotFound} />
