@@ -1,29 +1,44 @@
 import React from "react";
+//import { Redirect } from "react-router-dom";
+import Footer from './footer';
+import {AccordionItem,AccordionHeader,AccordionBody,UncontrolledAccordion} from "reactstrap";
 
 function About(){
+
+     
+   
     return (
-        
-            
-            <div className="container-fluid mt-5 my-4"> 
-               <div className="row">
-                <div className="col-6 bg-mute text-dark mt-4">
-                <img src='https://assets.traveltriangle.com/blog/wp-content/uploads/2016/08/Die-Rakotzbr%C3%BCck-or-Devil%E2%80%99s-Bridge.jpg' className='img-fluid shadow-4'  alt='...' />
-                </div>
-               
-                <div class="col-6  text-dark bg-mute mt-4 ">
-				 <h1 className="text-center text-success" >Travel Agency</h1>
-                <h4 className="fs-4 mt-3">✔ Organization Name is America's biggest online transport ticketing stage that has changed transport travel in the nation by conveying straightforwardness and comfort to a great many Americas who travel utilizing transport.</h4>
-                <h4 className="mt-3">✔ Established in 2006, Organization Name is a piece of Americas driving on the web travel organization XYZ Limited. By giving the most stretched-out decision, predominant client benefit, least costs, and unmatched advantages, Organization Name has served more than 8 million clients..</h4>
-                <h4 className="mt-3">✔ Organization Name has a worldwide nearness with activities crosswise over Indonesia, Singapore, Malaysia, Colombia, and Peru, separated from America.
-               </h4>
-                					
-                </div>
-                </div>
-                </div>
-           
-              
-               
-               
+        <>
+        <UncontrolledAccordion
+  defaultOpen={[
+    '1',
+    '2'
+  ]}
+  stayOpen
+>
+  <AccordionItem className="p-2">
+    <AccordionHeader targetId="1">
+      <h2>ABOUT KASHMIR</h2>
+    </AccordionHeader>
+    <AccordionBody accordionId="1">
+     <h4> Jammu and Kashmir is the northern most state in India. The state is Asia's 'Heaven on Earth', rich in premium cash crops like walnuts and saffron, blessed with jaw-dropping natural beauty all year long. With the Himalayas lining it from north-east side, there are many valleys formed such as the Kashmir Valley, Sindh Valley, Lidder Valley, Poonch Valley, Tawi and Chenab Valleys.<br/>The state's best destinations for Kashmir tourism such as Srinagar, Gulmarg, Sonamarg and Pahalgam, best tourist spots such as Shalimar Bagh, Chasme Shahi and Pari Mahal, important lakes such as Dal lake, Wular lake, Manasbal lake - all lie within the Kashmir Valley.<br/>The traditional dress of the people here is Pheran & Poots, which is worn by both men and women. Along with this, Mughal style turbans, headgear, taranga belt of pashmina & coloured scarf are also worn by the people. The principal languages spoken are Kashmiri & Urdu.</h4>
+    </AccordionBody>
+  </AccordionItem>
+  
+    <AccordionItem className="p-2">
+    <AccordionHeader targetId="2">
+      <h2>ABOUT JAMMU</h2>
+    </AccordionHeader>
+    <AccordionBody accordionId="2"> 
+    <h4>The lifestyle of the Jammu people is not very different from the rest of the people of India. They are deeply religious, and value their culture heritage a lot. Religion plays a central role in their lives, and regularly visit the numerous temples scattered around the city.<br/>
+    Both men & women can be seen in modern as well as traditional attire. The majority of the Jammu people speak Dogri, Gojri, Pahadi, Kashmiri, Hindi, Punjabi & Urdu.</h4>
+    </AccordionBody>
+    </AccordionItem>
+   
+      
+</UncontrolledAccordion>
+<Footer/>
+        </>              
         
     );
 }

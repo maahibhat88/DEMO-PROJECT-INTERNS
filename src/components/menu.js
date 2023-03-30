@@ -1,16 +1,15 @@
 import  './menu.css'
-import  { Fragment } from 'react';
 import {NavLink} from 'react-router-dom';
 
     function Menu(props) {
         
         console.log("the value of props is:",props);
         let {Data}=props;
-        console.log("the destructed item:",Data);
+       // console.log("the destructed item:",Data);
 
-         Data.map((element)=>{
-           console.log("list",element);
-        })
+        // Data.map((element)=>{
+          // console.log("list",element);
+        //})
         
         /*//It finds the first object that matches given condition
         const found=Data.find(i=>{
@@ -32,27 +31,44 @@ import {NavLink} from 'react-router-dom';
        
        return(
         <>
-        <nav>
-            <ul>
+              <nav className='navbar-expand-lg bg-info container-fluid '>
+                <div className='row'>
+                <div className="col-4 mt-3 bg-info text-dark">
+                    <h2>KASHMIR TOURISM</h2>
+                </div>
+
+                <div className='col-6 bg-info text-lg-dark'>
+                
+               <ul>
                 {
-            Data.map((i)=>{
-                return(
+                   Data.map((i)=>{
+                    return(
                      <li key={i.id}>
-                    <NavLink exact to={i.path} className='text-white' > 
+                    <NavLink exact to={i.path} className='text-dark text-lg' > 
                     {i.name} 
                    </NavLink>
                    </li>
                 )
              })
             }
-         
-            </ul>
-       </nav>
+            </ul> 
+                     
+        </div>
+        <div className='col-2'>
+            <div className='row'>
+                <div className='col-2 mt-3 pt-2'>
+                    <div className="btn btn-white bg-white">
+                    <NavLink to={'/'} className="text-info text-decoration-none">Login</NavLink>
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        </nav>
+      
       </>
-      ) 
-        
-                 
-       
+      )    
 }
 export default Menu;
 

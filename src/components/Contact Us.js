@@ -1,7 +1,21 @@
 import React from "react";
-
+//import { Redirect } from "react-router-dom";
+import Footer from "./footer";
+import axios from "axios";
 function Contact(){
+  const formHandler = (e) => {
+    e.preventDefault();
+    console.log("e",e.target[0].value);
+    let username = e.target[0].value;
+    console.log(username);
+    let config = { 'headers' : { 'Content-Type' : 'application/json' } };
+    const response = axios.post("http://localhost:8080/users",{ username : username });
+    console.log("Response ",response);
+  }
+    
+    
     return (
+        <>
         <div>
             <div className="container">
               <div className="row">
@@ -19,15 +33,13 @@ function Contact(){
                     
                     </div>
 
-                <div className="col 6 mt-4 pt-5">
-                <input type="text" class="form-control form-control-lg p-3 m-4" placeholder="Name"/>
-                <input type="text" class="form-control form-control-lg p-3 m-4" placeholder="Email"/>
-                <textarea  class="form-control form-control rows=5 p-3 m-4" placeholder="Message"/>
+                <form  onSubmit ={(e)=>{ formHandler(e) }} className="col 6 mt-5 pt-5 ">
+                <input type="text" name='username' class="form-control form-control-lg p-3 m-4 border-success" placeholder="Name"/>
+                {/* <input type="text" class="form-control form-control-lg p-3 m-4 border-success" placeholder="Email"/>
+                <textarea  class="form-control form-control rows=5 p-3 m-4 border-success" placeholder="Message"/> */}
                 <button type="submit" class="btn btn-success btn-lg mx-5">Submit</button>   
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>          
-                </div>
+                        
+                </form>
 
              
             </div>
@@ -37,8 +49,8 @@ function Contact(){
 
             
                 
-               
-      
+     <Footer/>          
+   </>   
     );
 }
 export default Contact;

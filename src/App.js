@@ -8,13 +8,7 @@ import './components/style.css'
 function App() {
   
   //const imge= new URL("./images/image.jpg",import.meta.url)
-  let numbers=[
-    {id:1,name:"irtiqa"},
-    {id:2,name:"irtu"},
-  ] 
-   numbers.map((ev)=>{
-    console.log(ev);
-   })
+  
   return (
     <h3>
     Hi Folks! we have started our internship learning project

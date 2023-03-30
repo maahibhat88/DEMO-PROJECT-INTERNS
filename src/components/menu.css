@@ -6,13 +6,13 @@ nav {
 
 li {
     display: inline-block;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     text-decoration: none;
 }
 
 li:hover {
-    background-color: black;
+    background-color: white;
   }
 
 ul {
